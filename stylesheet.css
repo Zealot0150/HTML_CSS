@@ -1,0 +1,112 @@
+body {
+
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(67, 112, 128);
+        display: grid;
+        grid-template-areas:
+          'header header header header header header'
+          'main main main main right right'
+          'footer footer footer footer footer footer';
+        grid-gap: 10px;
+        background-color: #2196F3;
+        padding: 10px;
+    
+  }
+
+  
+
+    nav > h1
+    {
+        grid-area: logo;       
+    }
+    nav > ul 
+    {
+        list-style-type: none; 
+        justify-content:space-evenly;
+        display: flex;
+    }
+    nav > ul > a 
+    {
+        grid-area: links;
+        float: left;
+        padding: 12px;
+        
+    }
+
+
+    nav> a
+    {
+        grid-area: rightnav;
+    } 
+
+
+    nav
+    {
+        display: grid;
+        grid-area: header;
+        grid-template-areas: "logo links links links rightnav";
+        align-items: center;
+        justify-items: center;
+        grid-gap: 10px;
+    }
+
+    
+    main{
+
+            display: grid;
+            grid-area: main;
+            grid-template-areas:
+              "mainh mainh"
+              "about about"
+              "art1 art2";
+              
+            grid-gap: 10px;
+            background-color: #1872bb;
+            padding: 10px;
+    }
+
+
+    main >h2
+    {
+        grid-area: mainh;        
+        
+    }
+    main >p
+    {
+        grid-area: about;
+    }
+
+    main > article:first
+    {
+        grid-area: art1;
+    }
+
+    main > article:not:first
+    {
+        grid-area: art2;
+        
+    }
+
+    main > article > img
+    {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+
+    body > aside >h2 
+    {
+        grid-area: right;
+    }
+
+
+     body > footer
+     {
+         grid-area: footer;
+         padding: 40;
+        border: #000f00;          
+     }
